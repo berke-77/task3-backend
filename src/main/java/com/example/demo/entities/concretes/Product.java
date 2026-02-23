@@ -23,20 +23,42 @@ public class Product {
 
     private String explanation;
 
-    public Product() {}
+    public Product() {
+        
+    }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id; 
+    }
+    public void setId(int id) { 
+        this.id = id;
+    }
 
-    public Category getCategory() { return category; }
-    public void setCategory(Category category) { this.category = category; }
+    public Category getCategory() {
+        return category;
+    }
+    public void setCategory(Category category) { 
+        this.category = category;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return name; 
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public BigDecimal getPrice() { return price; }
-    public void setPrice(BigDecimal price) { this.price = price; }
+    public BigDecimal getPrice() {
+        return price; 
+    }
+    public void setPrice(BigDecimal price) { 
+        this.price = price; 
+    }
 
-    public String getExplanation() { return explanation; }
-    public void setExplanation(String explanation) { this.explanation = explanation; }
+    public String getExplanation() {
+        return explanation;
+    }
+    public void setExplanation(String explanation) { 
+        this.explanation = explanation;
+    }
 }

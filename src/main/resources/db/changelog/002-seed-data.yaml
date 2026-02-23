@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-insert-roles
+      author: berke
+      changes:
+        - insert:
+            tableName: role
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: name, value: "admin" }
+        - insert:
+            tableName: role
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: name, value: "user" }
+
+  - changeSet:
+      id: 006-insert-admin
+      author: berke
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: email, value: "abc@abc.com" }
+              - column: { name: username, value: "admin" }
+              - column: { name: password, value: "admin" }
+              - column: { name: role_id, valueNumeric: 1 }
+
+  - changeSet:
+      id: 007-insert-categories
+      author: berke
+      changes:
+        - insert:
+            tableName: category
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: name, value: "Elektronik" }
+        - insert:
+            tableName: category
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: name, value: "Kırtasiye" }
+
+  - changeSet:
+      id: 008-insert-products
+      author: berke
+      changes:
+        - insert:
+            tableName: product
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: category_id, valueNumeric: 1 }
+              - column: { name: name, value: "Kablosuz Kulaklık" }
+              - column: { name: price, valueNumeric: 999.90 }
+              - column: { name: explanation, value: "Bluetooth 5.3, ANC" }
+        - insert:
+            tableName: product
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: category_id, valueNumeric: 2 }
+              - column: { name: name, value: "Defter" }
+              - column: { name: price, valueNumeric: 45.50 }
+              - column: { name: explanation, value: "A4, 80 yaprak" }
